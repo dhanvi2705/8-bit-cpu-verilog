@@ -1,35 +1,31 @@
-# 8-Bit CPU in Verilog
+# 8-Bit CPU using Verilog
 
-This project is a custom-designed 8-bit CPU implemented in Verilog HDL. It features a minimal instruction set and simulates core components like an ALU, control unit, registers, RAM, and a program counter.
+This project is a simple 8-bit CPU designed and simulated using Verilog HDL. It consists of modules like ALU, control unit, registers, memory, and program counter.
 
-## 🧠 Features
-- Verilog modules for ALU, register file, control unit, memory
-- Instruction set support: LDA, ADD, SUB, STA, LDI, JMP, OUT, HLT
-- Flags: Zero and Carry
-- Modular design for easy extension
-- Simulated using ModelSim / Quartus
+## Files Included
+- `top.v` – Top-level integration module
+- `alu.v` – Arithmetic and logic unit
+- `control.v` – Control logic (FSM)
+- `register.v` – Parameterized register
+- `control.vh` – Instruction and bus control constants
 
-## 🗂️ Files
-- `top.v`: Main integration module
-- `alu.v`: Arithmetic Logic Unit
-- `register.v`: Parameterized register module
-- `control.v`: Finite State Machine control logic
-- `control.vh`: Constants for instruction decoding
+## Features
+- Custom 8-bit CPU with basic instruction set
+- ALU with add/subtract and flags (carry, zero)
+- Register file and memory interaction
+- Instruction handling like LDA, ADD, SUB, JMP, OUT, HLT
+- Reset and clock functionality
 
-## 🚀 How to Simulate
-1. Open the project in ModelSim or Quartus
-2. Add the source files
-3. Create a testbench and compile
-4. Run the simulation and analyze the waveform
+## Tools Used
+- Quartus II
+- ModelSim (for simulation)
 
-## 📷 Screenshots
-<img src="docs/waveform.png" width="600">
-
-## 📚 Future Work
-- Extend to support stack operations
-- Add branching logic with conditions
-- MIPS-like instruction decoding
+## How to Run
+1. Add all `.v` and `.vh` files to your Quartus/ModelSim project
+2. Compile the design
+3. Run the simulation
+4. Observe outputs and waveforms
 
 ---
 
-Made with ❤️ by Dhanvi Patel
+Created by Dhanvi Patel
